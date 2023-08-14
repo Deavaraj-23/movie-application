@@ -12,34 +12,15 @@
 
   <hr> <br>
   <h4>This is my movie app</h4>
-  <!-- <div class="row">
-    <div class="col-md-4">
-      <a href="notes">
-        <div class="card">
-          <img class="card-img-top" src="{% static 'images/RRR.jpg' %}" alt="Notes image">
-          <img src="{% static 'images/RRR.jpg' %}">
-          <div class="card-body">
-            <h5 class="card-title ">
-              Movie List
-            </h5>
-            
-          </div>
-        </div>
-      </a>
-    </div> -->
+  <h1 class="btn btn-light p-3 "><a href="/movielist/">Movie List</a></h1>
+  <h1 class="btn btn-light "><a href="/search/">Movie Search</a></h1> <br>
+  <h1 class="btn btn-light"><a href="/profile/">Profile Details</a></h1>
+ 
 
-    {% for movie in movie_list %}
-<div class="card" style="width: 18rem;">
-    <!-- <img src="{{pet.image.url}}" class="card-img-top" alt="..."> -->
-    <div class="card-body">
-      <h5 class="card-title">{{movie.movie_name}}</h5>
-      <img height="200px" class="card-img-top" src="{{movie.image.url}}" alt="image cap"/>
-      <p class="card-text"></p>
-      <a href="/{{movie.id}}" class="btn btn-primary">details</a>
-    </div>
-  </div>
-  {% endfor %} 
+
+
 </section>
+{% endblock content %}
 {% endblock content %}
 
     
