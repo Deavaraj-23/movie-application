@@ -1,0 +1,95 @@
+{% extends 'movieapp/base.html' %}
+{% load static %} 
+{% block content %}
+
+    <!-- <div class="container">
+    <h1 class="text-center">
+        Book Details
+    </h1>
+    {% for movie in movie_list %}
+    <a href="/{{movie.id}}">{{movie.movie_name}} <br></a>
+    <img height="200px" class="card-img-top" src="{{movie.image.url}}" alt="image cap"/>
+    {% endfor %}
+    <a href="" class="btn btn-success">insert new records</a>
+</div> -->
+
+
+<section class="container text-center">
+    <h3>Welcome</h3>
+    <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+
+
+<hr><br><br>
+<!-- <div class="row">
+<div class="col-md-4">
+    <a href="/{{movie.id}}">
+      <div class="card">
+      <img class="card-img-top" src="{% static 'images/homework.jpg' %}" alt="Notes image"> 
+       <img height="200px" class="card-img-top" src="{{movie.image.url}}" alt="image cap"/> 
+        <div class="card-body">
+          <h5 class="card-title ">
+            {{movie.movie_name}}
+          </h5>
+          
+        </div>
+      </div>
+    </a>
+  </div>
+</div> -->
+<!-- <div class="row">
+    <div class="col-md-4">
+    <div class="card" style="width: 36rem;">
+        <a href="/{{movie.id}}">
+    <img src="{% static 'images/moonlight.jpg' %}" class="card-img-top" alt="movie post">
+    <div class="card-body">
+      <h5 class="card-title">{{movie.movie_name}}</h5> <hr><br>
+      
+    </a>
+      <a href="/{{movie.id}}" class="btn btn-primary">Movie Details</a>
+        </div>
+    </div>
+</div>
+</div>
+  
+  <hr><br>
+  <a href="/create/" class="btn btn-success">Add Movie</a>
+  
+  </section> -->
+
+  
+  <!-- <div class="col-md-4 col-lg-3">
+      <div class="card my-3">
+          
+          <img src="{{item.image.url}}" class="card-image-top" alt="Categories">
+          <div class="card-body">
+              <h5 class="card-title text-primary">{{item.name}}</h5>
+              
+              
+          </div>
+      </div>
+  </div> -->
+<section class="container">
+  <div class="row-md-14">
+    <div class="col-md-8">
+        {% for item in movielist %}
+      <a href="/{{item.id}}">
+        <div class="card">
+          <img class="card-img-top" src="{{item.image.url}}" alt="movie post">
+          <div class="card-body">
+            <h5 class="card-title ">
+                {{item.name}}
+            </h5>
+            <p>{{item.description}}</p>
+
+            
+          </div>
+        </div>
+      </a><hr><br>
+      {% endfor %}
+    </div>
+    </div>
+</section>
+  {% endblock %}

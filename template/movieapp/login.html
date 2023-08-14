@@ -1,0 +1,73 @@
+
+{% extends "movieapp/base.html" %}
+{% load static %}
+{% block content %}      
+
+<link rel="stylesheet" href="{% static 'css/login.css' %}" />
+
+
+<!--Login--> 
+<!-- <div class="container py-5">
+  <h1>Login</h1>
+  <form method="POST">
+    {% csrf_token %}
+    {{ login_form }}
+    <button class="btn btn-primary" type="submit">Login</button>
+  </form>
+  <p class="text-center">Don't have an account? <a href="/register/">Create an account</a>.</p>
+</div> -->
+
+
+
+<!-- <section class="myform-area">
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-lg-8">
+              <div class="form-area login-form">
+                  <div class="form-content">
+                    {% csrf_token %}
+                    {{ login_form }}
+                      <h2>Login</h2>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non aperiam cum quas quod reprehenderit.</p>
+                      <ul>
+                          <li><a href="#" class="facebook"><i class="fa fa-facebook-f"></i><span>facebook</span></a></li>
+                          <li><a href="#" class="twitter"><i class="fa fa-twitter"></i><span>twitter</span></a></li>
+                      </ul>
+                  </div>
+                  <div class="form-input">
+                      <h2>Login Form</h2>
+                      <form>
+                        {% csrf_token %}
+                        {{ login_form }}
+                          <div class="form-group">
+                              <input type="text"  id="" name="name" required>
+                              <label>User Name</label>
+                          </div>
+                          <div class="form-group">
+                              <input type="password" id="" name="password" required>
+                              <label>password</label>
+                          </div>
+                          <div class="myform-button">
+                              <button class="myform-btn">Login</button>
+                          </div>
+                      </form>
+                      <p class="text-center">Don't have an account? <a href="/register/">Create an account</a>.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section> -->
+<div class="login">
+  <div class="login-triangle"></div>
+  
+  <h2 class="login-header">Log in</h2>
+
+  <form class="login-container" method="POST">
+    {% csrf_token %}
+    {{ login_form }}
+   
+    <p><input type="submit" ><a> </a></p>
+  </form>
+</div>
+{% endblock %}

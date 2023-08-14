@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% extends 'movieapp/base.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- <div class="container">
+        <h1>{{movies.name}}RRR</h1>
+        <ul>
+            <li>{{newbook.title}}</li> 
+            <img src="{{movies.image.url}}" class="card-img-top" alt="movie post">
+            
+            <h1>{{movies.name}}RRR</h1>
+            <li><h3>Movie Description :</h3>{{movies.description}}film, also called motion picture or movie,
+                 series of still photographs on film, projected in rapid succession onto a screen by means of light.
+                  Because of the optical phenomenon known as persistence of vision, this gives the illusion of actual,
+                 smooth, and continuous movement.</li>
+            
+            
+            
+        </ul>
+        
+    </div> -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{ movies.image.url }}" alt="{{ movies.name }} poster">
+            </div>
+            <div class="col-md-6">
+                <h2>{{ movies.name }}</h2>
+                <p>{{ movies.description }}</p>
+                <!-- <p>Release Date: {{ movie.release_date }}</p> -->
+                <!-- Add more movie details as needed -->
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}
