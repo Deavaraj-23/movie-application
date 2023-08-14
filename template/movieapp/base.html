@@ -57,7 +57,7 @@
             {% else %}
             <li class="nav-item">
               <a class="nav-link" href="/register/">Register</a>
-              <a href="{% url 'profile' %}" title="Update my profile">{{request.user}}</a>
+              <a href="{% url 'profile' %}" title="Update my profile">{{request.username}}</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/login/">Login</a>
